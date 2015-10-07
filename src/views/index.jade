@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+
+    title Stanford Computer Science
+
+    meta(name='description' content='A stating point for building a static website in Jade, Stylus and ES6.')
+
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Source+Sans+Pro:300,300i,400,400i,600')
+
+    script(src='main.js')
+
+  body
+
+    header
+      .container
+        #logo
+          img.logo(src='assets/logo.png')
+        .tagline Pioneering the world's computer science research and education since 1965
+        .right
+          .login Log in
+          nav
+            a.nav-link(href='#') About
+            a.nav-link(href='#') Research
+            a.nav-link(href='#') Programs
+            a.nav-link(href='#') Courses
+            a.nav-link(href='#') People
+            a.nav-link(href='#') News &amp; Events
+            span.icon.icon-search
+
+    #content
+      #news
+        .text
+          .title: .content Smart telescope unveils the unseen
+          .subtitle: .content Stanford Computer Vision Lab invites you to see the other side of the world from your room
+
+      #events
+        .event
+          .content
+            .meta-1
+              .date September 25
+              .time 12:30 pm
+              .location Gates B01
+            .title Context, or, How to trick your users into thinking you're a genius
+            .meta-2
+              .speaker Darius Kazemi
+              .series HCI Seminar
+        .event
+          .content
+            .meta-1
+              .date October 7
+              .time 12:15 pm
+              .location Gates 104
+            .title BlindBox: Deep Packet Inspection over Encrypted Traffic
+            .meta-2
+              .speaker Raluca Ada Popa
+              .series Networking Seminar
+        .event
+          .content
+            .meta-1
+              .date November 3
+              .time 4:15 pm
+              .location Gates 463
+            .title Privacy in a Data-Driven World
+            .meta-2
+              .speaker Roxana Geambasu
+              .series Security Seminar
+        .more More events
