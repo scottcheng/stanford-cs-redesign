@@ -1,5 +1,7 @@
 # Stanford CS Website Redesign
 
+*Designed for HD screens (>1400px wide), may not work well on smaller screens.*
+
 ## Build
 
 ```bash
