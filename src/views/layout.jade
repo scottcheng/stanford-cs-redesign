@@ -1,0 +1,34 @@
+mixin header(isHome)
+  header
+    .container
+      #logo
+        a(href='./')
+          img.logo(src='assets/logo.png')
+      if isHome
+        .tagline Pioneering the world's computer science research and education since 1965
+      .right
+        .login Log in
+        nav
+          a.nav-link(href='#') About
+          a.nav-link(href='#') Research
+          a.nav-link(href='#') Programs
+          a.nav-link(href='#') Courses
+          a.nav-link(href='#') People
+          a.nav-link(href='#') News &amp; Events
+          span.icon.icon-search
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+
+    title Stanford Computer Science
+
+    meta(name='description' content='A stating point for building a static website in Jade, Stylus and ES6.')
+
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Source+Sans+Pro:300,300i,400,400i,600')
+
+    script(src='main.js')
+
+  block content

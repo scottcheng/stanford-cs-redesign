@@ -6,11 +6,11 @@ red = #e44949
 blue = #6fc9ed
 yellow = #ffdd59
 
-font-size-sm = 14px
-font-size-md = 18px
-font-size-ml = 22px
-font-size-lg = 28px
-font-size-xl = 48px
+font-size-sm = 13px
+font-size-md = 16px
+font-size-ml = 20px
+font-size-lg = 24px
+font-size-xl = 42px
 
 *, *:before, *:after
   box-sizing border-box
@@ -20,10 +20,12 @@ a, a:hover, a:active, a:focus, a:visited
   text-decoration none
   outline none
 
-html, body
+html, body#home
   height 100%
 
-container-width = 1350px
+container-width = 1200px
+gutter-width = 24px
+column-width = (container-width - gutter-width * 13) / 12
 
 body
   font-size 16px
@@ -33,11 +35,12 @@ body
   color #fff
   font-size font-size-md
   min-height 800px
+  overflow-x hidden
 
 .container
   width container-width
   margin 0 auto
-  padding 0 30px
+  padding 0 gutter-width
 
 rotate-angle = 2deg
 
@@ -45,24 +48,34 @@ header
   background red
   padding 50px 0
   position relative
-  height 228px
+  z-index 1
 
-  &:before
+  &:after
     content ''
     display block
     background linear-gradient(top, rgba(cardinal, .75), transparent)
     absolute bottom left (-100px)
-    width calc((100% - 1350px) / 2 + 100px + 420px)
+    width 'calc((100% - %s) / 2 + 100px + 320px)' % container-width
     height 200%
     transform rotate(rotate-angle)
     transform-origin bottom left
+
+  &:before
+      content ''
+      display block
+      background red
+      absolute bottom left
+      width 120%
+      height 200px
+      transform rotate(rotate-angle)
+      transform-origin bottom left
 
   .container
     position relative
     z-index 10
 
   img.logo
-    width 310px
+    width 250px
 
   .tagline
     margin-top 25px
@@ -70,7 +83,7 @@ header
     font-weight 300
 
   .right
-    absolute top -4px right 30px
+    absolute top -4px right gutter-width
     .login
       text-align right
     nav
@@ -88,88 +101,7 @@ header
       &:hover
         opacity .75
 
-#content
-  height calc(100% - 228px) // header height = 228px
-  #news, #events
-    height 100%
-    float left
-  #news
-    width calc((100% - 1350px) / 2 + 9 * 110px - 30px)
-  #events
-    width calc((100% - 1350px) / 2 + 3 * 110px + 60px)
+body#home header
+  height 210px
 
-#news
-  position relative
-  overflow hidden
-  &:before
-    content ''
-    display block
-    background red
-    absolute top (-200px) left
-    width 120%
-    height 200px
-    transform rotate(rotate-angle)
-    transform-origin bottom left
-
-  background-image url(../assets/news.png)
-  background-size cover
-  background-position 50% 50%
-
-  .text
-    absolute bottom right 500px
-    width 9 * 110px - 30px - 500px
-    cursor pointer
-    transition color .25s
-    &:hover
-      color rgba(#fff, .75)
-  .content
-    display inline-block
-    background rgba(yellow, .9)
-    padding 20px
-    line-height 1.5
-  .title
-    font-size font-size-xl
-    .content
-      padding-bottom 10px
-  .subtitle
-    font-style italic
-    .content
-      max-width 80%
-      font-weight 300
-      padding-top 10px
-
-#events
-  background blue
-  .event
-    height calc((100% - 63px) / 3)
-    position relative
-    .content
-      absolute top 50% left 30px
-      width 3 * 110px
-      transform translateY(-50%)
-    &:nth-child(2)
-      background rgba(#fff, .1)
-    &:nth-child(3)
-      background rgba(#fff, .2)
-    .meta-1, .meta-2
-      font-weight 300
-      *
-        display inline-block
-        margin-right 15px
-    .meta-1
-      text-transform uppercase
-      font-size font-size-sm
-      letter-spacing 1px
-    .title
-      font-size font-size-ml
-      font-weight 600
-      margin 10px 0
-  .more
-    background rgba(#fff, .3)
-
-  .event, .more
-    padding 20px 30px
-    cursor pointer
-    transition color .25s
-    &:hover
-      color rgba(#fff, .75)
+@import 'home'

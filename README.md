@@ -1,6 +1,6 @@
 # Stanford CS Website Redesign
 
-*Designed for HD screens (>1400px wide), may not work well on smaller screens.*
+*Designed for HD screens (>1200px wide), may not work well on smaller screens.*
 
 ## Build
 

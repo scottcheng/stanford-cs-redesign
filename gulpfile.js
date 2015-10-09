@@ -18,7 +18,7 @@ gulp.task('webpack', function(callback) {
 });
 
 gulp.task('jade', function() {
-  return gulp.src(paths.src + '/views/index.jade')
+  return gulp.src([paths.src + '/views/*.jade', '!' + paths.src + '/views/layout.jade'])
     .pipe($.plumber())
     .pipe($.jade())
     .pipe(gulp.dest(paths.dist));
