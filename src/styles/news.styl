@@ -1,0 +1,55 @@
+#news-content
+  margin 0 auto
+  width column-width * 8 + gutter-width * 7
+  clearfix()
+
+  img
+    width 100%
+
+  h2
+    background yellow
+    color #fff
+    font-size font-size-xl
+    padding 40px gutter-width
+    margin 0
+    position relative
+    z-index 20
+
+  .article-body, aside
+    float left
+  .article-body
+    width column-width * 6 + gutter-width * 5
+
+    .date
+      font-size font-size-sm
+      font-weight 300
+      margin 30px 0
+      text-transform uppercase
+      color #888
+
+    .tagline
+      font-weight 600
+
+    h3
+      margin 30px 0
+      font-size font-size-lg
+
+  aside
+    margin-left gutter-width
+    margin-top 77px
+    width column-width * 2 + gutter-width
+    ul, li
+      list-style none
+      padding 0
+      margin 0
+    .news-entry
+      margin-bottom 20px
+      .title
+        font-size font-size-sm
+        font-weight 600
+        margin-top 5px
+    h4
+      margin 0 0 20px
+    .more-link
+      color yellow
+      font-style italic

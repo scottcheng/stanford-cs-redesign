@@ -3,3 +3,32 @@ extends layout
 block content
   body#news
     +header()
+
+    article#news-content
+      h2 Smart telescope unveils the unseen
+      img(src='./assets/news.png')
+
+      .article-body
+        .date September 21, 2015
+        p.tagline Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        h3 Ipsum Condimentum Consectetur
+        p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+        h3 Ligula Porta Ornare Fusce
+        p Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.
+        p Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.
+
+      aside
+        h4 More at Stanford CS
+        ul.more-news
+          li.news-entry
+            img(src='./assets/news1.jpeg')
+            .title Mattis Porta Vehicula Ligula
+          li.news-entry
+            img(src='./assets/news2.jpeg')
+            .title Ornare Ultricies Commodo Sollicitudin Nibh
+        .more-link See all
+
+    footer
+      span © Stanford University. 353 Serra Mall, Stanford, CA 94305
+      span Terms of Use
+      span Copyright Complaints
